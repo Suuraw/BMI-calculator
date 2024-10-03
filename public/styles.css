@@ -6,7 +6,7 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
-
+/* towards the viewer */
 .star-field {
     position: fixed;
     top: 0;
