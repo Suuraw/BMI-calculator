@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator with Animated Stars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="star-field" id="starField"></div>
+    <div class="content">
+        <div class="container">
+            <h1>BMI Calculator</h1>
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight">
+            </div>
+            <div class="input-group">
+                <label for="height">Height:</label>
+                <div class="height-input">
+                    <input type="number" id="height" placeholder="Enter your height">
+                    <select id="height-unit" onchange="toggleFeetInches()">
+                        <option value="cm">cm</option>
+                        <option value="in">in</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+                <div class="feet-inches">
+                    <input type="number" id="feet" placeholder="Feet">
+                    <input type="number" id="inches" placeholder="Inches">
+                </div>
+            </div>
+            <button onclick="calculateBMI()" onkeypress="calculateBMI()">Calculate BMI</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
