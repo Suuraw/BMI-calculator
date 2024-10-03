@@ -13,8 +13,9 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    perspective: 600px;
+    perspective: 800px; /* Set a perspective to enhance the 3D effect */
     background: linear-gradient(to bottom, #000000, #0a0a2a);
+    overflow: hidden; /* Keep stars inside the view */
 }
 
 .star {
@@ -28,10 +29,12 @@ body, html {
 
 @keyframes moveStar {
     from {
-        transform: translateZ(0px);
+        transform: translateZ(600px); /* Start far away */
+        opacity: 0.1; /* Dim stars at the far end */
     }
     to {
-        transform: translateZ(600px);
+        transform: translateZ(0px); /* Move closer */
+        opacity: 1; /* Stars become brighter as they approach */
     }
 }
 
